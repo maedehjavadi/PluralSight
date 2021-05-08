@@ -178,11 +178,37 @@ h1,h2,h3,h4,h5{
     width: 100%;
     color:#ffff;
     margin-bottom: 1.5rem;
+    position: relative;
+    animation-name: showcaseText;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 .showcase .secondary-btn{
     width: 60%;
     font-size: 1rem;
     margin: auto;
+    opacity: 0;
+    animation-name: Sbtn;
+    animation-delay: 3s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes showcaseText {
+    0%{
+        top: -450px;
+    }
+    100%{
+        top:0px
+    }
+}
+@keyframes Sbtn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 /*media queries*/
 @media (min-width: 1100px) {
