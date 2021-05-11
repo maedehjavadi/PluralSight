@@ -67,20 +67,44 @@ h1,h2,h3,h4,h5{
     width: 80%;
     padding-bottom: 1rem;
 }
+.signin form .form-control{
+    position: relative;
+    margin: 5px;
+}
 .signin label{
     font-size: 0.9rem;
     font-weight: 500;
     line-height: 1.5rem;
+    padding: 5px;
+    left:10px;
 }
-.signin .text-input{
+.signin .form-control label{
+    position: absolute;
+    left: 5px;
+}
+.signin .form-control .text-input{
     margin-bottom: 1.3rem;
     width: 100%;
     border-radius: 2px;
     background: #181818;
-    border: 1px solid #555;
+    border: 0;
+    border-bottom: 1px solid rgb(204, 204, 204);
     color: #ffff;
     padding: 0.5rem 0.7rem;
     line-height: 1.3rem;
+}
+.signin form .form-control input:focus,
+.signin form .form-control input:valid{
+    outline: 0;
+    border-bottom-color: #4380B6;
+}
+.signin .form-control label span{
+    display: inline-block;
+    transition: transform 0.3s ease-in;
+}
+.signin form .form-control input:focus+ label span ,
+.signin form .form-control input:valid+ label span{
+    transform: translate(-5px,-20px) ;
 }
 /*Buttons*/
 .signin .primary-btn{
